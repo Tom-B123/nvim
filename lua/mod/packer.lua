@@ -11,7 +11,7 @@ return require("packer").startup(function(use)
         priority = 1000,
         opts = {},
     })
-
+    use "rachartier/tiny-inline-diagnostic.nvim"
     use "nvim-telescope/telescope.nvim"
     use "nvim-lualine/lualine.nvim"
     use {
@@ -88,12 +88,12 @@ return require("packer").startup(function(use)
             })
         end,
     }
-    use({
-        "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
-        config = function()
-            require("lsp_lines").setup()
-        end,
-    })
+    -- use({
+    --     "https://github.com/ErichDonGubler/lsp_lines.nvim",
+    --     config = function()
+    --         require("lsp_lines").setup()
+    --     end,
+    -- })
     use({
         "lervag/vimtex",
         init = function()
